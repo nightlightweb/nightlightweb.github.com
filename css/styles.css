@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #151515 url("../img/txtr_wood.png") 0 0;
+}
+
+@font-face {
+	font-family:'mavenpro';
+	src: url('../fonts/MavenProLight-300.otf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'governor';
+	src: url('../fonts/governor.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+#title {
+	font-family:"governor",Sans-Serif;
+	font-size:7em;
+	padding:0px;
+	margin:0px;
+	text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+	opacity:0.9;
+	color:#0093C2;
+	text-shadow: 0px 3px 8px #2a2a2a;
+}
+
+#subtitle {
+	font-size:3em;
+}
+
+.hero-unit {
+	width:90%;
+	max-width: 600px;
+	margin: 0 auto;
+	border-radius:20px;
+	background-image:url('../img/txtr_fabric.png');
+}
+
+a {
+	text-decoration:none;
+	color:#08C;
+}
+
+a:hover {
+	color:#F73;
+	text-decoration:none;
+}
