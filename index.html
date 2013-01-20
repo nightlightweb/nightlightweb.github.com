@@ -25,18 +25,33 @@
 
 				});
 
-			// To initially run the function:
-			$(window).resize();
+				// To initially run the function:
+				$(window).resize();
+				$('#lightbulb-icon').click(nightmode);
 
 			});
+			
+			function nightmode() {
+				$('head').append('<link id="nightmode-stylesheet" rel="stylesheet" type="text/css" href="css/nightmode.css" />');
+				$('#lightbulb-icon').unbind('click').click(daymode);
+				$('#lightbulb-icon').attr("src", "img/lightbulb-white.svg");
+				$('#lightbulb-icon').attr("alt", "Lightbulb icon (white)");
+			}
+			
+			function daymode() {
+				$('#nightmode-stylesheet').remove();
+				$('#lightbulb-icon').unbind('click').click(nightmode);
+				$('#lightbulb-icon').attr("src", "img/lightbulb.svg");
+				$('#lightbulb-icon').attr("alt", "Lightbulb icon");
+			}
 		</script>
 	</head>
 
 	<body>
 		<div class="hero-unit">
 			<div>
-				<h1 id="title">Night<span style="color:#F73;">light</span></h1>
-				<h2 id="subtitle">Web Design &amp; Development</h2>
+				<h1 id="title">Night<span id="title-light">light</span></h1><img hidden id="lightbulb-icon" src="img/lightbulb.svg" alt="Lightbulb icon" />
+				<h2 id="subtitle" class="no-nightmode">Web Design &amp; Development</h2>
 
 				<p>We're two guys (<a href="https://github.com/strugee" class="user-mention">@strugee</a> and <a href="https://github.com/jacksondc" class="user-mention">@jacksondc</a>) who have a love for code.</p>
 			</div>
