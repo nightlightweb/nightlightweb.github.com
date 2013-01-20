@@ -13,6 +13,7 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				   
+				// Center the document vertically
 				$(window).resize(function(){
 
 					$('.hero-unit').css({
@@ -27,6 +28,8 @@
 
 				// To initially run the function:
 				$(window).resize();
+				
+				// Register an event handler for the lightbulb
 				$('#lightbulb-icon').click(nightmode);
 
 			});
