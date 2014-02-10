@@ -1,12 +1,20 @@
-body { 
+#background { 
   background: url('../img/code-day.jpg') no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
 
 body {
+	/*chrome puts in a margin on small screens - who knows why*/
+	margin:0px;
 }
 
 body, h1, p {
@@ -14,13 +22,9 @@ body, h1, p {
 	color:#FFF;
 }
 
-html,body {
-	height:100%;
-}
-
 #content {
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	bottom:0px;
 	left:0px;
 	right:0px;
@@ -36,17 +40,13 @@ h1 {
 p {
 	font-weight:400;
 	font-size:2em;
+	max-width:65%;
 }
 
-h1 > span, p > span {
+h1 > span {
 	background-color:rgba(0,0,0,0.5);
 	padding-left:3%;
 	padding-right:1%;
-}
-
-p > span {
-	padding-top:0.25em;
-	padding-bottom:0.25em;
 }
 
 a {
@@ -60,4 +60,63 @@ a {
 
 a:hover {
 	color:#F73;
+}
+
+@media screen and (max-height: 600px) and (min-width: 800px) {
+	/*really short but not really narrow, make the text at the top*/
+	#content {
+		top:0%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	/*It's a phone*/
+	#background {
+		display:none;
+	}
+
+	/*to make the faces show*/
+	/*#background {
+		background: url('../img/code-day.jpg') no-repeat right 30%; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}*/
+
+	#content {
+		padding:1em;
+		top:0%;
+	}
+
+	h1, p, h1 > span, p > span {
+		background-color:transparent;
+		margin:0;
+		padding:0;
+		color:#000;
+		width:100%;
+		max-width:100%;
+	}
+}
+
+@media screen and (max-width: 1130px) and (min-width:801px) {
+  p {
+  	background-color:rgba(0,0,0,0.5);
+	padding-left:3%;
+	padding-right:1%;
+	line-height:1.5em;
+	padding-top:0.25em;
+	padding-bottom:0.25em;
+  }
+}
+
+@media screen and (min-width: 1131px) {
+  p > span {
+	background-color:rgba(0,0,0,0.5);
+	padding-left:3%;
+	padding-right:1%;
+	line-height:1.5em;
+	padding-top:0.25em;
+	padding-bottom:0.25em;
+  }
 }

@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nightlight Web</title>
-    <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/modernizr.js"></script>
     
     <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
+
+    <div id="background"></div>
 
     <div id="content">
       <h1><span>Nightlight</span></h1>
@@ -21,8 +22,7 @@
     <script src="js/foundation.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script>
-      //$(document).foundation();
-      $('h1').fitText(1);
+      $('h1').fitText(1, {minFontSize: '45px'});
     </script>
   </body>
 </html>
