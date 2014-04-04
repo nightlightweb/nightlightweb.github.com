@@ -12,6 +12,24 @@
   right:0;
 }
 
+#footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:0.25rem;
+	text-align:center;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#logo {
+	height:6.75rem;
+}
+
+.subtle-link {
+	color:white;
+}
+
 html, body {
 	/*chrome puts in a margin on small screens - who knows why*/
 	margin:0px;
@@ -35,19 +53,17 @@ h1 {
 	font-weight:100;
 	text-transform:uppercase;
 
-	font-size:8em;
+	font-size:8rem;
 }
 
 p {
 	font-weight:400;
-	font-size:2em;
-	max-width:65%;
+	font-size:2rem;
 }
 
 h1 > span {
 	background-color:rgba(0,0,0,0.5);
-	padding-left:3%;
-	padding-right:1%;
+	padding-right:1rem;
 }
 
 @media screen and (max-height: 600px) and (min-width: 800px) {
@@ -58,7 +74,7 @@ h1 > span {
 }
 
 @media screen and (max-width: 800px) {
-	/*It's a phone*/
+	/*It's something small*/
 	#background {
 		display:none;
 	}
@@ -90,19 +106,20 @@ h1 > span {
 @media screen and (max-width: 1130px) and (min-width:801px) {
   p {
   	background-color:rgba(0,0,0,0.5);
-	padding-left:3%;
-	padding-right:1%;
+	padding-left:5rem;
+	padding-right:1rem;
 	line-height:1.5em;
 	padding-top:0.25em;
 	padding-bottom:0.25em;
+	max-width:60%;
   }
 }
 
 @media screen and (min-width: 1131px) {
 	p > span {
 		background-color:rgba(0,0,0,0.5);
-		padding-left:3%;
-		padding-right:1%;
+		padding-left:5rem;
+		padding-right:1rem;
 		line-height:1.5em;
 		padding-top:0.25em;
 		padding-bottom:0.25em;
