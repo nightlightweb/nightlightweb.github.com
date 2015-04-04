@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nightlight Web</title>
     <script src="js/modernizr.js"></script>
-
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
 
     <div id="background"></div>
+    
+    <div id="content">
+      <h1><span><span class="icon-ligtbulb"></span>Nightlight</span></h1>
+      <p><span>We are <span><a href="http://github.com/jacksondc">jacksondc</a></span> and <span><a href="http://github.com/strugee">strugee</a></span>, and we love to code.</span></p>
+    </div>
 
-    <div class="center"><p>Nothing to see here. Move along.</p></div>
+    <div id="footer">
+      Copyright &#169; Nightlight Web 2014 | Icon by <a class="subtle-link" target="_blank" href="http://www.thenounproject.com/waymanate/">Nathan Thompson</a>
+    </div>
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script>
+      $('h1').fitText(1.1, {minFontSize: '45px'});
+    </script>
   </body>
 </html>

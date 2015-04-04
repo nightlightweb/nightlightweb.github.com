@@ -1,5 +1,5 @@
-#background {
-  background: url('../img/bg-2.jpg') no-repeat center center;
+#background { 
+  background: url('../img/code-day.jpg') no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,36 +10,175 @@
   bottom:0;
   left:0;
   right:0;
+}
 
-  z-index:-1;
+#footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:0.25rem;
+	text-align:center;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#logo {
+	height:6.75rem;
+}
+
+.subtle-link {
+	color:white;
 }
 
 html, body {
-  width:100%;
-  height:100%;
-  margin:0;
+	/*chrome puts in a margin on small screens - who knows why*/
+	margin:0px;
+	height:100%;
 }
 
-body {
-  display: table;
+body, h1, p {
+	font-family: 'Lato', Arial, sans-serif;
+	color:#FFF;
 }
 
-.center {
-  display: table-cell;
-  vertical-align: middle;
+#content {
+	position: absolute;
+	top: 15%;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+
+h1 {
+	font-weight:100;
+	text-transform:uppercase;
+
+	font-size:8rem;
 }
 
 p {
-  max-width:400px;
-  margin:0 auto;
-  text-align:center;
+	font-weight:400;
+	font-size:2rem;
+}
 
-  font-size:3rem;
-  color:#fff;
-  text-shadow:0 0 10px rgba(0,0,0,0.7),
-              0 0 15px rgba(0,0,0,0.7);
+h1 > span {
+	background-color:rgba(0,0,0,0.5);
+	padding-right:1rem;
+}
 
-  font-family:'PT Sans', sans-serif;
+@media screen and (max-height: 600px) and (min-width: 800px) {
+	/*really short but not really narrow, make the text at the top*/
+	#content {
+		top:0%;
+	}
+}
 
-  line-height:1.15;
+@media screen and (max-width: 800px) {
+	/*It's something small*/
+	#background {
+		display:none;
+	}
+
+	/*to make the faces show*/
+	/*#background {
+		background: url('../img/code-day.jpg') no-repeat right 30%; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}*/
+
+	#content {
+		padding:1em;
+		top:0%;
+	}
+
+	h1, p, h1 > span, p > span {
+		background-color:transparent;
+		margin:0;
+		padding:0;
+		color:#000;
+		width:100%;
+		max-width:100%;
+	}
+}
+
+@media screen and (max-width: 1130px) and (min-width:801px) {
+  p {
+  	background-color:rgba(0,0,0,0.5);
+	padding-left:5rem;
+	padding-right:1rem;
+	line-height:1.5em;
+	padding-top:0.25em;
+	padding-bottom:0.25em;
+	max-width:60%;
+  }
+}
+
+@media screen and (min-width: 1131px) {
+	p > span {
+		background-color:rgba(0,0,0,0.5);
+		padding-left:5rem;
+		padding-right:1rem;
+		line-height:1.5em;
+		padding-top:0.25em;
+		padding-bottom:0.25em;
+	}
+}
+
+/* Effect 17: move up fade out, push border */
+a {
+	text-shadow: none;
+	padding: 10px 0;
+	bottom:5px;
+}
+
+a:hover {
+	bottom:10px;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 2px;
+	background: rgba(255,255,255,0.9);
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+a:hover::after,
+a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+a {
+	color:#08C;
+	/*to fix the j*/
+	padding-left:0.1em;
+	padding-right:0.1em;
+	-moz-transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#F73;
+}
+
+span {
+	position:relative;
 }
